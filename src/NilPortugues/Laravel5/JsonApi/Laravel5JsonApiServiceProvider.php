@@ -57,9 +57,10 @@ class Laravel5JsonApiServiceProvider extends ServiceProvider
                 $provider = new Laravel52Provider();
                 break;
             default:
-                throw new \RuntimeException(
-                    sprintf('Laravel version %s is not supported. Please use the 5.1 for the time being', $version)
-                );
+                $provider = new Laravel52Provider();
+//                 throw new \RuntimeException(
+//                     sprintf('Laravel version %s is not supported. Please use the 5.1 for the time being', $version)
+//                 );
                 break;
         }
 
